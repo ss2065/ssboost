@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./icon.png" />
-  <title>쿠팡 - 직접입력</title>
+  <title>쿠팡-블루키워드</title>
 
   <!-- cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
@@ -27,7 +27,6 @@
   <script defer src="./js/script.js"></script>
   <script defer src="./js/select.js"></script>
   <script defer src="./js/popup.js"></script>
-  <script defer src="./js/favorite.js"></script>
 </head>
 
 <form name="header">
@@ -62,10 +61,10 @@
   </header>
 </form>
 
-<body class="gray-color">
+<body class="gray-color height">
 
   <!-- 옵션 선택 팝업 -->
-  <div class="modal modal5">
+  <!-- <div class="modal modal5">
     <div class="dialog w700">
       <div class="modal-header">
         <div class="title">
@@ -274,7 +273,7 @@
         <button class="close" type="button">취소</button>
       </div>
     </div>
-  </div>
+  </div> -->
   <section class="allcontent">
 
       <!-- 네비게이션 사이드 바 -->
@@ -433,26 +432,77 @@
     <!-- 인풋 데이터 입력 바 -->
     <div class="blue-keyword">
       <div class="headtext">
-        <a class="h1-100">쿠팡분석 > 키워드 발굴 > 즐겨찾기</a>
+        <a class="h1-100">쿠팡분석 > 시장 분석 > 블루키워드 분석</a>
         <a class="tooltip-100" href="#">
           <span>?</span>
           <div class="tooltip">
-            <p>[🚀쿠팡 분석 > 키워드 발굴]의 각 기능별<br>즐겨찾기를 최대 100개까지 저장 가능합니다.</p>
+            <p>분석한 키워드가 지금 팔리는 제품인지,<br>얼마나 팔리는지 분석합니다.<br>리뷰정보는 최근 100개의 리뷰로 분석합니다.</p>
           </div>
         </a>
       </div>
-      <div class="chk-bar box-bar">
+      <div class="chk-bar">
         <div class="chk-box">
-          <div class="type m10"> 
-            <p>* 즐겨찾기 잔여횟수 : <strong class="skyblue-color">4</strong> / 100</p>
+          <div class="type m10">
+            <p>쿠팡 검색어</p>
+            <div class="search w100">
+              <div class="search-box">
+                <input type="text" class="search">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search">
+          <div class="search-box">
+            <!-- <button class="btn-70 btn-modal" data-modal="modal5" type="button">보기옵션</button> -->
+            <button class="btn-send">분석하기</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- <div class="blue-keyword">
+      <div class="headtext">
+        <a class="h1-100">쿠팡분석 > 키워드 발굴 > TOP 500</a>
+        <a class="tooltip-100" href="#">?</a>
+      </div>
+      <div class="chk-bar">
+        <div class="chk-box">
+          <div class="type m10">
+            <p>1차 카테고리</p>
+            <div class="select-01 b100">
+              <button type="button" class="label">생활/건강</button>
+              <ul class="optionList">
+                <li class="optionItem">식품/건조</li>
+                <li class="optionItem">인테리어/가구</li>
+                <li class="optionItem">욕실/화장실</li>
+              </ul>
+            </div>
+          </div>
+          <div class="type m10">
+            <p>2차 카테고리</p>
+            <div class="select-01 b100 disabled">
+              <button type="button" class="label">2차 선택</button>
+            </div>
+          </div>
+          <div class="type m10">
+            <p>3차 카테고리</p>
+            <div class="select-01 b100 disabled">
+              <button type="button" class="label">3차 선택</button>
+            </div>
+          </div>
+          <div class="type m10">
+            <p>4차 카테고리</p>
+            <div class="select-01 b100 disabled">
+              <button type="button" class="label">4차 선택</button>
+            </div>
           </div>
         </div>
         <div class="search">
           <div class="search-box">
             <button class="btn-70 btn-modal" data-modal="modal5" type="button">보기옵션</button>
+            <button class="btn-send">분석하기</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 테이블 바 -->
       <div class="table-box-wrap">
@@ -468,15 +518,17 @@
                 <th scope="col"></th>
                 <th scope="col"></th>
                 <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
                 <th scope="col">
                   <div class="group-01">
-                    <p>1페이지 상품</p>
+                    <p>리뷰정보</p>
                   </div>
-                </th>
+                </th>                
                 <th scope="col"></th>
                 <th scope="col"></th>
                 <th scope="col"></th>
-                <th scope="col"></th>
+                <!-- <th scope="col"></th>
                 <th scope="col"></th>
                 <th scope="col">
                   <div class="group-01">
@@ -506,34 +558,36 @@
                   <div class="group-01">
                     <p>1~10위 판매가</p>
                   </div>
-                </th>
+                </th> -->
               </tr>
               <tr>
                 <th class="fiex" scope="col">순위</th>
-                <th class="fiex" scope="col">즐겨찾기</th>
-                <th class="fiex" scope="col">키워드</th>
-                <th class="fiex" scope="col">PC</th>
-                <th class="fiex" scope="col">모바일</th>
-                <th class="fiex" scope="col">총계</th>
                 <th class="fiex" scope="col">카테고리</th>
-                <th scope="col">
+                <th class="fiex" scope="col">상품명</th>
+                <th class="fiex" scope="col">썸네일</th>
+                <th class="fiex" scope="col">판매가</th>
+                <th class="fiex" scope="col">배송비</th>
+                <th class="fiex" scope="col">제품구분</th>
+                <!-- <th scope="col">
+                  <div class="group-02">
+                    <p class="rocket-color">로켓배송</p><span class="ashgray-color">+로켓프레쉬</span>
+                  </div>
+                </th> -->
+                <th class="fiex" scope="col">도착예정일</th>
+                <th class="fiex" scope="col">총 리뷰수</th>
+                <th class="fiex" scope="col">최초 리뷰등록일</th>
+                <th class="fiex" scope="col">최근 7일 리뷰수</th>
+                <th class="fiex" scope="col">최근 30일 리뷰수</th>
+                <!-- <th class="fiex" scope="col">제품구분</th>
+                <th class="fiex" scope="col">제품구분</th>
                   <div class="group-02">
                     <p class="rocket-color">로켓배송</p><span class="ashgray-color">+로켓프레쉬</span>
                   </div>
                 </th>
                 <th scope="col" class="jet-color">제트배송</th>
                 <th scope="col" class="purple-color">로켓직구</th>
-                <th scope="col">Wing 상품</th>
-                <th scope="col">광고</th>
-                <th scope="col">
-                  <div class="group-02">
-                    <p class="rocket-color">로켓배송</p><span class="ashgray-color">+로켓프레쉬</span>
-                  </div>
-                </th>
-                <th scope="col" class="jet-color">제트배송</th>
-                <th scope="col" class="purple-color">로켓직구</th>
-                <th scope="col">Wing 상품</th>
-                <th scope="col">
+                <th scope="col">Wing 상품</th> -->
+                <!-- <th scope="col">
                   <div class="group-02">
                     <p class="rocket-color">로켓배송</p><span class="ashgray-color">+로켓프레쉬</span>
                   </div>
@@ -551,274 +605,136 @@
                 <th scope="col">Wing 상품</th>
                 <th scope="col">최저가</th>
                 <th scope="col">최고가</th>
-                <th scope="col">가격 차이</th>
+                <th scope="col">가격 차이</th> -->
               </tr>
               <tr></tr>
             </thead>
             <tbody>
               <tr>
                 <td class="fiex">1</td>
-                <td class="fiex favorite active"><p></p></td>
-                <td class="fiex">영광굴비 오징어</td>
-                <td class="fiex">23,500</td>
-                <td class="fiex">46,400</td>
-                <td class="fiex">140,000</td>
-                <td class="left-aglin">시몬매트리스</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>-</td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>23,500원</td>
-                <td>50,000원</td>
-                <td>
-                  <div class="group-01">
-                    <p class="skyblue-color">±</p>
-                    <p>112%</p>
-                  </div>
-                </td>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
               </tr>
               <tr>
                 <td class="fiex">1</td>
-                <td class="fiex favorite active"><p></p></td>
-                <td class="fiex">영광굴비 오징어</td>
-                <td class="fiex">23,500</td>
-                <td class="fiex">46,400</td>
-                <td class="fiex">140,000</td>
-                <td class="left-aglin">시몬매트리스</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>-</td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>23,500원</td>
-                <td>50,000원</td>
-                <td>
-                  <div class="group-01">
-                    <p class="skyblue-color">±</p>
-                    <p>112%</p>
-                  </div>
-                </td>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
               </tr>
               <tr>
                 <td class="fiex">1</td>
-                <td class="fiex favorite active"><p></p></td>
-                <td class="fiex">영광굴비 오징어</td>
-                <td class="fiex">23,500</td>
-                <td class="fiex">46,400</td>
-                <td class="fiex">140,000</td>
-                <td class="left-aglin">시몬매트리스</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>-</td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
-                </td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>23,500원</td>
-                <td>50,000원</td>
-                <td>
-                  <div class="group-01">
-                    <p class="skyblue-color">±</p>
-                    <p>112%</p>
-                  </div>
-                </td>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
               </tr>
               <tr>
                 <td class="fiex">1</td>
-                <td class="fiex favorite active"><p></p></td>
-                <td class="fiex">영광굴비 오징어</td>
-                <td class="fiex">23,500</td>
-                <td class="fiex">46,400</td>
-                <td class="fiex">140,000</td>
-                <td class="left-aglin">시몬매트리스</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
+              </tr>
+              <tr>
+                <td class="fiex">1</td>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>-</td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
+              </tr>
+              <tr>
+                <td class="fiex">1</td>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
+              </tr>
+              <tr>
+                <td class="fiex">1</td>
+                <td class="fiex">가전디지털 > 키보드/마우스 > 마우스 > 무선마우스</td>
+                <td class="fiex">벤타론 세계최초 자력부착 무소음 무선 자석 마우스</td>
+                <td class="fiex">
+                    <img src="./img/coupang_blue_01.png" alt="쿠팡">
                 </td>
-                <td>
-                  <div class="group-01">
-                    <p>4개</p><span class="gray-color">(8%)</span>
-                  </div>
+                <td class="fiex">33,120원</td>
+                <td class="fiex">-</td>
+                <td class="fiex">
+                  <img src="./img/logo_rocket.png" alt="로켓배송">
                 </td>
-                <td>6,320건</td>
-                <td>2,580건</td>
-                <td>323건</td>
-                <td>1,605,305건</td>
-                <td>23,500원</td>
-                <td>50,000원</td>
-                <td>
-                  <div class="group-01">
-                    <p class="skyblue-color">±</p>
-                    <p>112%</p>
-                  </div>
-                </td>
+                <td>7/12 도착 예정</td>
+                <td>18537개</td>
+                <td>2023.01.23</td>
+                <td>15개</td>
+                <td>108개</td>
               </tr>
             </tbody>
           </table>
@@ -853,5 +769,6 @@
     </div>
   </div>
 </footer>
+
 
 </html>
